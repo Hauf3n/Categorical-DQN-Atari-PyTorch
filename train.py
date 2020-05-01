@@ -80,7 +80,9 @@ def train(hyperparameters):
 
     replay = Experience_Replay(replay_memory_size)
     runner = Env_Runner(env, agent)
-    optimizer = optim.Adam(agent.parameters(), lr=lr)
+    
+    adam_eps = 0.01/minibatch_size # paper choice
+    optimizer = optim.Adam(agent.parameters(), lr=lr, eps=adam_eps)
 
     num_steps = 0
     num_model_updates = 0
@@ -197,21 +199,21 @@ if __name__ == "__main__":
     
     # set hyperparameter
     
-    hyperparameters.add_argument('-lr', type=float, default=1e-4)
+    hyperparameters.add_argument('-lr', type=float, default=2.5e-4)
     hyperparameters.add_argument('-v_min', type=float, default=-10)
     hyperparameters.add_argument('-v_max', type=float, default=10)
     hyperparameters.add_argument('-atoms', type=int, default=51)
     hyperparameters.add_argument('-env', default='PongNoFrameskip-v4')
     hyperparameters.add_argument('-lives', type=bool, default=False)
     hyperparameters.add_argument('-stacked_frames', type=int, default=4)
-    hyperparameters.add_argument('-replay_memory_size', type=int, default=200000)
+    hyperparameters.add_argument('-replay_memory_size', type=int, default=250000)
     hyperparameters.add_argument('-replay_size_to_update', type=int, default=20000)
     hyperparameters.add_argument('-gamma', type=float, default=0.99)
     hyperparameters.add_argument('-minibatch_size', type=int, default=32)
     hyperparameters.add_argument('-steps_rollout', type=int, default=16)
     hyperparameters.add_argument('-start_eps', type=float, default=1)
     hyperparameters.add_argument('-final_eps', type=float, default=0.05)
-    hyperparameters.add_argument('-final_eps_frame', type=int, default=750000)
+    hyperparameters.add_argument('-final_eps_frame', type=int, default=1000000)
     hyperparameters.add_argument('-total_steps', type=int, default=25000000)
     hyperparameters.add_argument('-target_net_update', type=int, default=625)
     hyperparameters.add_argument('-save_model_steps', type=int, default=500000)
