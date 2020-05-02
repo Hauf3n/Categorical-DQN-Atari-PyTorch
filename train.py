@@ -81,8 +81,7 @@ def train(hyperparameters):
     replay = Experience_Replay(replay_memory_size)
     runner = Env_Runner(env, agent)
     
-    adam_eps = 0.01/minibatch_size # paper choice
-    optimizer = optim.Adam(agent.parameters(), lr=lr, eps=adam_eps)
+    optimizer = optim.Adam(agent.parameters(), lr=lr)
 
     num_steps = 0
     num_model_updates = 0
