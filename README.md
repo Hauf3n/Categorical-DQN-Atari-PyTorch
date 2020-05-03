@@ -1,4 +1,4 @@
-# Categorical_DQN-Atari-PyTorch
+# Categorical-DQN-Atari-PyTorch
 Implementation of [Categorical DQN (C51)](https://arxiv.org/abs/1707.06887) by Bellemare et al.<br />
 
 Applied to the gym Seaquest, Breakout, Pong and SpaceInvaders environment. *NoFrameskip-v4
