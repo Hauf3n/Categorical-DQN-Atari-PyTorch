@@ -9,7 +9,7 @@ Applied to the gym Seaquest, Breakout, Pong and SpaceInvaders environment. *NoFr
  
  # Training
  
- C51 algorithm is a bit more unstable than the paper results but still good, especially Seaquest.<br />
+ My C51 algorithm is a bit more unstable than the paper results but still good, especially Seaquest.<br />
  
  Training: Seaquest <br />
  ![seaq](https://github.com/Hauf3n/Categorical_DQN-Atari-PyTorch/blob/master/media/seaquest_plot.png)<br />
