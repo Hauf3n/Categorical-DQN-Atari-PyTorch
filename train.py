@@ -189,7 +189,7 @@ def train(hyperparameters):
         if num_steps%save_model_steps < steps_rollout:
             torch.save(agent,f"{env_name}-{num_steps}.pt")
 
-        env.close()
+    env.close()
     
 
 if __name__ == "__main__":
