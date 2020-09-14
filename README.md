@@ -9,7 +9,7 @@ Replace the output of a Q-network (expected return) with a distribution over ret
 However, C51 will kind of compute the expected return over all defined returns.<br /><br />
 The core idea is that the C51-Q-network can have different representations for each outcome,<br />
 because of the distribution property. It means that the last layer of the network does not need<br /> 
-to encode 2 observations ,which have the same expected return, with the same activation pattern.
+to encode 2 observations, which have the same expected return, with the same activation pattern.
 
 # Results - Seaquest - Random Run
  ![games](https://github.com/Hauf3n/Categorical_DQN-Atari-PyTorch/blob/master/media/seaquest_37k.gif)
