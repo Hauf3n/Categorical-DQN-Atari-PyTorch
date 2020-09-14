@@ -18,7 +18,7 @@ to encode 2 observations, which have the same expected return, with the same act
  # Training
  
  My C51 algorithm is a bit more unstable than the paper results but still good, especially Seaquest.<br />
- Improved the algorihm speed by vectorizing the for loop.
+ Improved the algorithm speed by vectorizing the for loop.
  
  Training: Seaquest <br />
  ![seaq](https://github.com/Hauf3n/Categorical_DQN-Atari-PyTorch/blob/master/media/seaquest_plot.png)<br />
